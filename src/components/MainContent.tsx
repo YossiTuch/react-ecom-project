@@ -99,11 +99,14 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xs:w-[20rem] p-5 sm:w-[40rem[] lg:w-[55rem] xl:w-[55rem]">
+    <section className="xs:w-[20rem] mr-[10rem] p-5 sm:w-[40rem[] lg:w-[55rem] xl:w-[55rem]">
       <div className="mb-5">
         <div className="flex flex-col items-center justify-between sm:flex-row">
           <div className="relative mt-5 mb-5">
-            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="flex items-center rounded-full border px-4 py-2">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center rounded-full border px-4 py-2"
+            >
               <LuTally3 className="mr-2" />
               {filter === "all"
                 ? "Filter"
@@ -160,7 +163,9 @@ const MainContent = () => {
                   key={page}
                   onClick={() => handlePageChange(page)}
                   className={`mx-1 rounded-full border px-4 py-2 ${page === currentPage ? "bg-black text-white" : ""}`}
-                >{page}</button>
+                >
+                  {page}
+                </button>
               ))}
             </div>
           </button>
